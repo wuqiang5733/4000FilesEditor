@@ -69,7 +69,7 @@ public class EditorFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        // 这儿是因为有三个文件吗？要用线程池
         if (!loaded) {
             loadTask = new LoadTextTask();
             loadTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
